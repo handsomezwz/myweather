@@ -77,6 +77,19 @@ public class MyWeatherDB {
         return list;
     }
 
+    /**
+     * 将City实例储存到数据库
+     * */
+    public void saveCities(City city){
+        if (city != null){
+            ContentValues values = new ContentValues();
+            values.put("city_name",city.getCityName());
+            values.put("city_code",city.getCityCode());
+            values.put("province_id",city.getProvinceId());
+            db.insert("City",null,values);
+        }
+    }
+
     /*
     * 从数据库中读取全部城市信息
     * */

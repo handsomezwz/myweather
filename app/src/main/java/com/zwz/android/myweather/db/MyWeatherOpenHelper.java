@@ -35,7 +35,8 @@ public class MyWeatherOpenHelper extends SQLiteOpenHelper {
             " country_code text" +
             " city_id integer)";
 
-    public MyWeatherOpenHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
+    public MyWeatherOpenHelper(Context context, String name,
+                               SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
 
